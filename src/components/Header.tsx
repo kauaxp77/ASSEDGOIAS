@@ -46,7 +46,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-6">
-          <Link to="/membro" className="text-institutional hover:text-navy-900 transition-colors font-semibold text-sm flex items-center gap-2">
+          <Link to="/associado" className="text-institutional hover:text-navy-900 transition-colors font-semibold text-sm flex items-center gap-2">
             <Shield className="w-4 h-4" />
             Área do Associado
           </Link>
@@ -72,7 +72,7 @@ export default function Header() {
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-graphite font-medium py-2 border-b border-gray-50">Início</Link>
           <a href="#sobre" onClick={() => setIsMobileMenuOpen(false)} className="text-graphite font-medium py-2 border-b border-gray-50">Sobre</a>
           <a href="#associados" onClick={() => setIsMobileMenuOpen(false)} className="text-graphite font-medium py-2 border-b border-gray-50">Associados</a>
-          <Link to="/membro" onClick={() => setIsMobileMenuOpen(false)} className="text-institutional font-semibold py-2 border-b border-gray-50 flex items-center gap-2">
+          <Link to="/associado" onClick={() => setIsMobileMenuOpen(false)} className="text-institutional font-semibold py-2 border-b border-gray-50 flex items-center gap-2">
             <Shield className="w-4 h-4" /> Área do Associado
           </Link>
           <Link to="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-gold font-semibold py-2 flex items-center gap-2">

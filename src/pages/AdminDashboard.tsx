@@ -6,7 +6,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
-      
+
       {/* Admin Sidebar */}
       <aside className="w-full md:w-64 bg-navy-900 text-gray-400 flex flex-col flex-shrink-0 min-h-screen md:sticky md:top-0">
         <div className="p-6 border-b border-white/10">
@@ -15,7 +15,7 @@ export default function AdminDashboard() {
             <span className="text-xs text-gold uppercase tracking-widest font-semibold mt-1">Administrativo</span>
           </div>
         </div>
-        
+
         <nav className="flex-1 py-6 px-4 space-y-1 overflow-y-auto">
           <AdminMenuLink icon={<LayoutDashboard />} label="Visão Geral" active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')} />
           <AdminMenuLink icon={<Users />} label="Associados" active={activeTab === 'associados'} onClick={() => setActiveTab('associados')} />
@@ -26,7 +26,7 @@ export default function AdminDashboard() {
           <AdminMenuLink icon={<MessageSquare />} label="Mensagens" active={activeTab === 'mensagens'} onClick={() => setActiveTab('mensagens')} />
           <AdminMenuLink icon={<UsersRound />} label="Diretoria" active={activeTab === 'diretoria'} onClick={() => setActiveTab('diretoria')} />
         </nav>
-        
+
         <div className="p-4 border-t border-white/10">
           <AdminMenuLink icon={<Settings />} label="Configurações do Sistema" active={activeTab === 'config'} onClick={() => setActiveTab('config')} />
         </div>
@@ -34,7 +34,7 @@ export default function AdminDashboard() {
 
       {/* Main Panel Content */}
       <main className="flex-1 flex flex-col min-h-screen overflow-hidden">
-        
+
         {/* Topbar */}
         <header className="bg-white border-b border-gray-200 py-4 px-8 flex justify-between items-center sticky top-0 z-10">
           <h1 className="text-xl font-bold text-navy-900">
@@ -139,11 +139,10 @@ export default function AdminDashboard() {
 
 function AdminMenuLink({ icon, label, badge, active, onClick }: { icon: React.ReactNode, label: string, badge?: string, active?: boolean, onClick: () => void }) {
   return (
-    <button 
+    <button
       onClick={onClick}
-      className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-sm transition-colors ${
-        active ? 'bg-white/10 text-white' : 'hover:bg-white/5 hover:text-white'
-      }`}
+      className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-sm transition-colors ${active ? 'bg-white/10 text-white' : 'hover:bg-white/5 hover:text-white'
+        }`}
     >
       <div className="flex items-center gap-3">
         <span className={active ? 'text-white' : 'text-gray-500'}>{icon}</span>
