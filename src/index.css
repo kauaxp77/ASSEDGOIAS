@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-graphite bg-white font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy-900;
+  }
+}
+
+@layer components {
+  /* Botão Primário (Dourado) - Sem excesso de bordas arredondadas e sombras sutis */
+  .btn-primary {
+    @apply px-6 py-3 bg-gold hover:bg-gold-hover text-white font-medium rounded-sm transition-colors duration-200 inline-flex items-center justify-center gap-2;
+  }
+  
+  /* Botão Secundário (Azul Institucional) */
+  .btn-secondary {
+    @apply px-6 py-3 bg-institutional hover:bg-institutional-hover text-white font-medium rounded-sm transition-colors duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  /* Botão Outline */
+  .btn-outline {
+    @apply px-6 py-3 border border-gold text-gold hover:bg-gold hover:text-white font-medium rounded-sm transition-colors duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  /* Títulos e Textos Premium */
+  .heading-serif {
+    @apply font-serif font-semibold tracking-tight text-navy-900;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-4 block;
+  }
+  
+  /* Cards elegantes sem muito arredondamento */
+  .card-elegant {
+    @apply bg-white p-8 border border-gray-100 rounded-sm hover:border-gold/30 transition-colors duration-300;
+  }
+}
